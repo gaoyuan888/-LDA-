@@ -21,7 +21,7 @@ dictionary = corpora.Dictionary(trainset)
 corpus = [dictionary.doc2bow(text) for text in trainset]
 lda = LdaModel(corpus=corpus, id2word=dictionary, num_topics=4)
 # lda.save('*.model')
-result = lda.print_topics(4)
+result = lda.print_topics(7)
 finalwords = []
 for tuple in result:
     _, string = tuple
